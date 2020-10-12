@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="20dp"
+    app:cardCornerRadius="10dp"
+    android:layout_gravity="center"
+    app:cardElevation="8dp"
+    app:layout_anchorGravity="center"
+    android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/seekbar_shape"
+            android:padding="5dp"
+            android:id="@+id/cancel"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/cancel" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:id="@+id/l1"
+    android:layout_centerHorizontal="true"
+      android:layout_height="wrap_content">
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/object_confirmed_bg_gradient_start"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:elevation="10dp"
+    app:cardCornerRadius="3dp"
+       android:layout_height="wrap_content">
+    <TextView
+        android:textColor="#000"
+         android:layout_width="wrap_content"
+         android:padding="5dp"
+        android:id="@+id/firstMonth"
+        android:layout_height="wrap_content" />
+</androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/monthSeparator"
+            android:layout_width="10dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="#000"
+            android:visibility="gone" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:elevation="10dp"
+        app:cardCornerRadius="3dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+             android:padding="5dp"
+            android:id="@+id/lastMonth"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/relative"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+             android:paddingTop="2dp"
+            android:paddingEnd="10dp"
+
+            android:textColor="#fff"
+            android:textSize="14sp"
+            >
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/object_confirmed_bg_gradient_start"/>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:text="January"
+        android:layout_marginTop="5dp"
+        android:paddingStart="20dp"
+
+        android:id="@+id/jan"
+          android:textSize="20dp"
+         android:layout_height="wrap_content" />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:text="February"
+        android:id="@+id/feb"
+        android:paddingStart="20dp"
+
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:text="March"
+        android:layout_marginTop="5dp"
+        android:id="@+id/mar"
+        android:paddingStart="20dp"
+
+         android:textSize="20dp"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:text="April"
+        android:paddingStart="20dp"
+
+        android:layout_marginTop="5dp"
+        android:id="@+id/apr"
+        android:textSize="20dp"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:text="May"
+        android:layout_marginTop="5dp"
+        android:paddingStart="20dp"
+
+        android:id="@+id/may"
+        android:textSize="20dp"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:paddingStart="20dp"
+
+        android:text="June"
+        android:id="@+id/june"
+
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:text="July"
+        android:id="@+id/july"
+        android:layout_marginTop="5dp"
+        android:paddingStart="20dp"
+
+        android:textSize="20dp"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:paddingStart="20dp"
+
+        android:text="August"
+        android:id="@+id/aug"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:text="September"
+        android:id="@+id/sep"
+        android:paddingStart="20dp"
+
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:text="October"
+        android:layout_marginTop="5dp"
+        android:id="@+id/oct"
+        android:paddingStart="20dp"
+
+        android:textSize="20dp"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:text="November"
+        android:paddingStart="20dp"
+
+        android:layout_marginTop="5dp"
+        android:id="@+id/nov"
+        android:textSize="20dp"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:text="December"
+        android:paddingStart="20dp"
+
+        android:id="@+id/dec"
+        android:textSize="20dp"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
+        <Button
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:text="Done"
+            android:id="@+id/action_bt"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="#fff"
+            android:layout_below="@id/l1"
+             android:layout_height="wrap_content" />
+    </RelativeLayout>
+    </ScrollView>
+</androidx.cardview.widget.CardView>

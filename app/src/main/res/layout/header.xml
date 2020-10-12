@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        app:contentInsetLeft="-10dp"
+        android:layout_weight="1"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:contentInsetStart="-10dp"
+        android:layout_gravity="end"
+        android:gravity="end"
+        app:contentInsetStartWithNavigation="0dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/back"
+                android:gravity="start|center"
+                android:onClick="endActivity"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:foregroundTint="#fff"
+                    android:tint="#fff"
+                    android:background="@drawable/state_imagebutton"
+                    android:onClick="backOnClicked"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/back"
+                android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                android:textColor="#fff" />
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="30dp"
+                android:layout_centerVertical="true"
+                android:layout_height="30dp"
+                android:layout_marginEnd="5dp"
+                android:onClick="searchuttonOnclick"
+                android:layout_alignParentEnd="true"
+                app:srcCompat="@drawable/ic_search_black_24dp" />
+
+            <RelativeLayout
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                android:background="#fff"
+                >
+
+                <ImageView
+                    android:id="@+id/backSearchBar"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="backOnClicked"
+                    android:layout_marginStart="10dp"
+
+                    app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+                <EditText
+                    android:id="@+id/searchEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/backSearchBar"
+                    android:layout_toStartOf="@id/cancelsearcBar"
+                    android:background="#fff"
+                    android:focusable="true"
+                    android:hint="@string/search"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/cancelsearcBar"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:foregroundTint="#fff"
+                    android:onClick="emptySearchbarClicked"
+                    app:srcCompat="@drawable/cancel" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+</com.google.android.material.appbar.AppBarLayout>
+

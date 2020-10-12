@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangeLoginCredentialsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#fff">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+
+                android:background="@drawable/ic_logofinal" />
+
+        </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/relativeLayout"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/waves" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:orientation="vertical"
+        android:padding="15dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:id="@+id/email_layout"
+    android:layout_height="wrap_content">
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Enter new email address"
+            android:textSize="16sp"
+            android:layout_marginStart="15dp"
+
+             android:id="@+id/password_email"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/email_address"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yellow_rect"
+            android:layout_marginStart="15dp"
+            android:paddingStart="16dp"
+            android:layout_marginEnd="15dp"
+            android:paddingEnd="10dp"
+            android:visibility="gone"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_mail_outline_black_24dp"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email_id"
+            android:lines="1"
+
+            />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/enter_your_password"
+        android:id="@+id/pass_text"
+        android:textSize="16sp"
+        android:layout_marginStart="15dp"
+        android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yellow_rect"
+        android:layout_marginStart="15dp"
+        android:paddingStart="16dp"
+        android:layout_marginEnd="15dp"
+        android:paddingEnd="10dp"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/password_24dp"
+        android:inputType="textPassword"
+        android:hint="@string/password"
+
+        />
+
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/password_layout"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/enter_your_old_password"
+                android:textSize="16sp"
+                android:layout_marginStart="15dp"
+                android:textColor="#000" />
+
+            <EditText
+                android:id="@+id/old_password"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/yellow_rect"
+                android:layout_marginStart="15dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/password_24dp"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+
+                />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/enter_your_new_password"
+                android:textSize="16sp"
+                android:layout_marginStart="15dp"
+                android:textColor="#000" />
+
+            <EditText
+                android:id="@+id/new_password"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/yellow_rect"
+                android:layout_marginStart="15dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/password_24dp"
+                android:inputType="textPassword"
+                android:hint="@string/new_password"
+
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:indeterminateTint="#fff"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/linearLayout"
+        android:elevation="10dp"
+        android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:minWidth="200dp"
+            android:paddingStart="40dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="40dp"
+            android:paddingBottom="10dp"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/order_filters"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:background="@drawable/shadow_rectangle"
+    tools:showIn="@layout/activity_all_cutomers"
+    tools:context=".AllCustomerActivity"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radiogroup1"
+        android:checkedButton="@id/mobile"
+        android:layout_gravity="center_horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:id="@+id/mobile"
+            android:drawablePadding="4dp"
+            android:drawableStart="@drawable/ic_phone_iphone_black_24dp"
+            android:layout_height="wrap_content"
+            android:drawableTint="@color/color8"
+            android:onClick="mobileClicked"
+            android:text="Mobile" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="nameClicked"
+            android:drawablePadding="4dp"
+            android:id="@+id/nameSearch"
+            android:drawableTint="@color/color5"
+            android:drawableStart="@drawable/user_24dp"
+            android:text="Name" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addressClicked"
+            android:id="@+id/addressSearch"
+            android:drawableStart="@drawable/ic_home_black_24dp"
+            android:drawableTint="@color/color10"
+            android:drawablePadding="4dp"
+            android:text="Address" />
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radiogroup2"
+        android:layout_gravity="center_horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="rateOnClick"
+            android:id="@+id/rateSearch"
+            android:drawableStart="@drawable/rupees_icon"
+            android:text="@string/rate_extra" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="bottleClicked"
+            android:id="@+id/bottleClicked"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/water_bottle1"
+            android:text="Bottles" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="paymentClicked"
+            android:id="@+id/paymentSearch"
+            android:drawableStart="@drawable/wallet"
+            android:drawablePadding="5dp"
+            android:text="Pending Payments" />
+
+    </RadioGroup>
+</LinearLayout>

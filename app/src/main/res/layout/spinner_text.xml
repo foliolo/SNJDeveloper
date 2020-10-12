@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layoutDirection="ltr"
+    android:id="@android:id/text1"
+    style="@style/spinnerItemStyle"
+    android:singleLine="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"
+    android:drawableEnd="@drawable/arrow_down_white"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+
+    android:background="@drawable/month_filters"
+    android:paddingStart="8dp"
+    android:paddingEnd="5dp"
+    android:textColor="#fff"
+    />

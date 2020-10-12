@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        app:hintEnabled="true"
+        app:boxBackgroundColor="@color/white"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:endIconMode="dropdown_menu"
+        app:endIconTint="@color/colorAccent"
+        android:hint="Type"
+        app:helperTextEnabled="false"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:paddingStart="11dp"
+            android:paddingEnd="10dp"
+            android:longClickable="false"
+            android:textColorHint="@color/black"
+            android:editable="false"
+            android:id="@+id/type_data_value"
+            android:layout_height="wrap_content">
+
+        </AutoCompleteTextView>
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:id="@+id/id_view"
+        android:orientation="horizontal">
+        <ProgressBar
+            android:layout_width="30dp"
+            android:id="@+id/id_progressbar"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_height="30dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:hintEnabled="true"
+            app:boxBackgroundColor="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:endIconMode="dropdown_menu"
+            app:endIconTint="@color/colorAccent"
+            android:hint="ID"
+            app:helperTextEnabled="false"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:paddingStart="11dp"
+                android:paddingEnd="10dp"
+                android:longClickable="false"
+                android:textColorHint="@color/black"
+                android:editable="false"
+                android:id="@+id/id_data_value"
+                android:layout_height="wrap_content">
+
+            </AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+</LinearLayout>

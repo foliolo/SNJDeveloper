@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#3D000000"
+    android:id="@+id/progressbar_dialog"
+    android:visibility="gone"
+    android:elevation="10dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/l1"
+        android:background="@drawable/common_google_signin_btn_text_light_normal_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/progressTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:maxWidth="200dp"
+            android:padding="10dp"
+            android:text="Processing"
+            android:textAlignment="center"
+            android:textColor="@color/homecolor"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/view_color"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Background"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:id="@+id/background_Bt"
+            android:textColor="@color/white"
+            android:foreground="?selectableItemBackground"
+            android:background="@color/colorAccent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

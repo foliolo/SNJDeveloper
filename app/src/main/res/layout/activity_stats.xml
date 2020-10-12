@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StatsActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="30dp"
+        android:paddingStart="10dp"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:foreground="@drawable/state_imagebutton"
+            android:background="@drawable/seekbar_shape"
+            android:onClick="backOnClicked"
+            android:padding="5dp"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:orientation="vertical"
+           android:layout_gravity="center_vertical"
+           android:layout_marginStart="10dp"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="10dp"
+           android:id="@+id/l1"
+           android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orders"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            android:textColor="#000" />
+           <TextView
+               android:id="@+id/title_small"
+               android:visibility="gone"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="By "
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:textColor="#000" />
+
+       </LinearLayout>
+        <ImageView
+            android:id="@+id/search"
+
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/seekbar_shape"
+            android:onClick="searchuttonOnclick"
+            android:padding="5dp"
+            android:src="@drawable/ic_search_black_24dp"
+            android:tint="#000" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/relative"
+            android:layout_below="@id/l1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/TotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:textColor="#000"
+                android:text="00"
+                android:textStyle="bold"
+                android:textSize="40sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:textColor="#000"
+                android:text=".00"
+
+                android:id="@+id/suffix"
+                android:textSize="40sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@id/relative"
+            android:paddingStart="3dp"
+            android:paddingEnd="5dp"
+            android:layout_marginTop="-20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TotalTrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:padding="5dp"
+                android:textSize="13sp" />
+            <ProgressBar
+                android:id="@+id/progressbar"
+                style="@android:style/Widget.DeviceDefault.ProgressBar.Small.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="5dp"
+                />
+
+            <RelativeLayout
+
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+
+                android:paddingTop="2dp"
+
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/monthText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/month_filters"
+                    android:drawableEnd="@drawable/arrow_down_white"
+                    android:gravity="center_vertical"
+                    android:paddingStart="6dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="5dp"
+                    android:text=" Today "
+                    android:textColor="#fff"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:visibility="invisible" />
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#1976d2"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerview"
+
+         android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>
+

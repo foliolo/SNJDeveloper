@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:id="@+id/appbar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            app:contentInsetLeft="-10dp"
+            android:layout_weight="1"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:contentInsetStart="-10dp"
+            android:layout_gravity="end"
+            android:gravity="end"
+            app:contentInsetStartWithNavigation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageButton
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:foregroundTint="#fff"
+                    android:background="@drawable/state_imagebutton"
+                    android:tint="#fff"
+
+                    android:id="@+id/back"
+                    android:onClick="backOnClicked"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/back"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                    android:textColor="#fff" />
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:onClick="openSavedNotification"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_baseline_notifications_24" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:onClick="popupClicked"
+        android:paddingStart="@dimen/home_page_mode_item_padding_horizontal"
+        android:paddingEnd="@dimen/home_page_mode_item_padding_horizontal"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="32dp"
+            android:paddingBottom="8dp"
+            android:id="@+id/title1"
+            android:text="Popup Message"
+            android:textColor="@color/object_confirmed_bg_gradient_end"
+            android:textSize="16sp"/>
+        <ImageButton
+            android:layout_width="30dp"
+            android:onClick="openPopupHelp"
+            android:tooltipText="Help"
+            android:tint="@color/object_confirmed_bg_gradient_end"
+            android:src="@drawable/ic_help_outline_black_24dp"
+
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/desc1"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:layout_below="@id/title1"
+            android:fontFamily="sans-serif"
+            android:id="@+id/desc1"
+            android:text="@string/show_a_message_when_user_open_the_app"
+            android:textColor="@color/object_detected_bg_gradient_end"
+            android:textSize="14sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/desc1"
+            android:background="#43141414"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:onClick="notificationClicked"
+        android:paddingStart="@dimen/home_page_mode_item_padding_horizontal"
+        android:paddingEnd="@dimen/home_page_mode_item_padding_horizontal"
+        android:layout_width="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="32dp"
+            android:paddingBottom="8dp"
+            android:id="@+id/title2"
+            android:text="Notification"
+            android:textColor="@color/object_confirmed_bg_gradient_end"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:id="@+id/desc2"
+            android:layout_below="@id/title2"
+            android:fontFamily="sans-serif"
+            android:text="@string/send_notification_message_to_the_user"
+            android:textColor="@color/object_detected_bg_gradient_end"
+            android:textSize="14sp"/>
+        <ImageButton
+            android:layout_width="30dp"
+            android:onClick="openNotifyHelp"
+            android:tooltipText="Help"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_help_outline_black_24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/desc2"
+            android:layout_height="30dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/desc2"
+            android:background="#43141414"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:onClick="emailClicked"
+        android:paddingStart="@dimen/home_page_mode_item_padding_horizontal"
+        android:paddingEnd="@dimen/home_page_mode_item_padding_horizontal"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/entry_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="32dp"
+            android:paddingBottom="8dp"
+            android:text="E Mail"
+            android:textColor="@color/object_confirmed_bg_gradient_end"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/entry_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:fontFamily="sans-serif"
+            android:layout_below="@+id/entry_title"
+            android:text="@string/send_e_mail_to_the_users"
+            android:textColor="@color/object_detected_bg_gradient_end"
+            android:textSize="14sp"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:onClick="openEmailHelp"
+            android:tooltipText="Help"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_help_outline_black_24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/entry_subtitle"
+            android:layout_height="30dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/entry_subtitle"
+            android:background="#43141414" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:onClick="infoBoxClicked"
+        android:paddingStart="@dimen/home_page_mode_item_padding_horizontal"
+        android:paddingEnd="@dimen/home_page_mode_item_padding_horizontal"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/bottom_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="32dp"
+            android:paddingBottom="8dp"
+            android:text="Information box"
+            android:textColor="@color/object_confirmed_bg_gradient_end"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/bottom_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:fontFamily="sans-serif"
+            android:layout_below="@+id/bottom_title"
+            android:text="@string/create_a_information_box_for_a_user"
+            android:textColor="@color/object_detected_bg_gradient_end"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:onClick="openInfoHelp"
+            android:tooltipText="Help"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_help_outline_black_24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/bottom_subtitle"
+            android:layout_height="30dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/bottom_subtitle"
+            android:background="#43141414" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:onClick="extraClicked"
+        android:paddingStart="@dimen/home_page_mode_item_padding_horizontal"
+        android:paddingEnd="@dimen/home_page_mode_item_padding_horizontal"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="32dp"
+            android:paddingBottom="8dp"
+            android:text="Extra"
+            android:textColor="@color/object_confirmed_bg_gradient_end"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:fontFamily="sans-serif"
+            android:text="Pre build notifications and configuration"
+            android:textColor="@color/object_detected_bg_gradient_end"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#43141414" />
+
+    </LinearLayout>
+</LinearLayout>

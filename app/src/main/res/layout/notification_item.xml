@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        android:orientation="vertical"
+        android:paddingEnd="13dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/num_view"
+            android:visibility="gone"
+            android:layout_marginStart="10dp"
+            app:cardBackgroundColor="@color/color48"
+            android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="20dp"
+        android:text="1"
+        android:gravity="center"
+        android:id="@+id/numText"
+        android:textColor="@color/white"
+        android:layout_height="20dp"/>
+        </androidx.cardview.widget.CardView>
+    <ImageView
+        android:layout_width="80dp"
+        android:id="@+id/image"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_marginStart="-10dp"
+        android:layout_toEndOf="@id/num_view"
+        android:background="@color/view_color"
+        android:layout_marginBottom="5dp"
+        android:layout_height="80dp"/>
+    <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="lfdslfjlsjdf"
+            android:layout_toEndOf="@id/image"
+            android:layout_toStartOf="@id/user"
+            android:layout_marginBottom="5dp" />
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="5dp" />
+        <TextView
+            android:id="@+id/userTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time"
+            android:text="sdfsdfsdfsdf"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/image"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+</RelativeLayout>

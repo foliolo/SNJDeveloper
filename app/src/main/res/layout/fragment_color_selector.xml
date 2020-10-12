@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <top.defaults.colorpicker.ColorPickerView
+        android:id="@+id/colorPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:enableBrightness="true"
+        app:enableAlpha="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="160dp"
+            android:id="@+id/color_viewer"
+            android:layout_height="60dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/colorValue"
+        android:text="#FFFFFF"
+        android:paddingStart="10dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        android:layout_height="60dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/invalid_color"
+        android:id="@+id/invalidColor"
+        android:visibility="gone"
+        android:textColor="@color/red"
+        android:layout_marginStart="180dp"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view"
+        android:layout_marginTop="25dp"
+        android:background="@color/view_color" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:id="@+id/chooseBt"
+        android:layout_margin="10dp"
+        android:textAllCaps="false"
+        android:text="Choose"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/circle_img"/>
+    <item android:drawable="@drawable/water_bottle"
+        android:width="50dp"
+        android:gravity="center"
+        android:height="50dp"
+         />
+
+</layer-list>

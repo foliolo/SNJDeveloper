@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultMap>
+    <entry>
+        <key>email_template</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>email_separator_start</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>email_separator_end</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>email_separator_initial_start</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>email_separator_initial_end</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>fetch_interval</key>
+        <value>21600</value>
+    </entry>
+    <entry>
+        <key>admin_custom_notification_screen</key>
+        <value></value>
+    </entry>
+    <entry>
+        <key>admin_custom_admin_info_screen</key>
+        <value></value>
+    </entry>
+</defaultMap>

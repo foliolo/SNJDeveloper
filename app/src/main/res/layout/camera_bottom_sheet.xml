@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="12dp"
+    android:id="@+id/cardview"
+    app:behavior_peekHeight="130dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/cancel"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:tint="#000"
+            android:onClick="cancelOnClick"
+            android:visibility="invisible"
+            android:layout_marginEnd="15dp"
+            android:id="@+id/cancel"
+            android:layout_height="30dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="15dp"
+        android:layout_margin="10dp"
+        android:layout_height="60dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="@string/_91"
+                android:textSize="20sp"
+                android:id="@+id/code"
+
+                android:textColor="@color/barcode_field_box_stroke"
+                android:layout_height="60dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:enabled="false"
+                android:id="@+id/mobileEdit"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:digits="0123456789"
+                android:maxLength="10"
+                android:paddingStart="40dp"
+                android:layout_height="60dp"
+                android:autofillHints="@string/mobile_number" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="bottom"
+                android:id="@+id/mobileText"
+                android:text="@string/enter_mobile_number"
+                android:paddingBottom="2dp"
+                android:layout_toEndOf="@id/code"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="5dp"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/listview"
+        android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/progressbar"
+            android:paddingStart="5dp"
+            android:paddingEnd="1dp"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Searching"
+                android:layout_marginStart="10dp"
+                android:drawableTint="#737373"
+                android:drawableStart="@drawable/ic_search_black_24dp"
+                android:textSize="17sp"
+                android:drawablePadding="10dp"
+                android:id="@+id/search"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:layout_width="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center|end"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:indeterminateTint="#737373"
+                android:layout_alignParentEnd="true"
+                android:foregroundGravity="right"
+                tools:targetApi="lollipop" />
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/lightgray"
+                android:layout_margin="15dp"
+                android:layout_below="@id/search"
+                android:layout_height="1dp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/nothing_found"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/no_results_found"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/lightgray"
+                android:layout_margin="15dp"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:text="@string/recent"
+            android:textSize="14sp"
+            android:id="@+id/one"
+            android:visibility="gone"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/barcode_field_box_stroke"
+            android:layout_height="40dp"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/frame"
+            android:visibility="gone"
+            android:layout_height="125dp"/>
+        </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

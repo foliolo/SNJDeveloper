@@ -1,0 +1,176 @@
+<resources>
+    <string name="app_name">SNJ Chilled Water Dev</string>
+    <!-- Strings for barcode detection settings. -->
+    <string name="pref_key_barcode_reticle_width" translatable="false">barcode_brw</string>
+    <string name="pref_key_barcode_reticle_height" translatable="false">barcode_brh</string>
+    <string name="pref_key_enable_barcode_size_check" translatable="false">barcode_ebsc</string>
+    <string name="pref_key_minimum_barcode_width" translatable="false">barcode_mbw</string>
+    <string name="pref_key_delay_loading_barcode_result" translatable="false">barcode_dlbr</string>
+    <string name="cd_close_button">Back</string>
+    <string name="cd_flash_button">Toggle camera flash</string>
+    <string name="prompt_point_at_a_barcode">Point your camera at a QR Code</string>
+    <string name="prompt_move_camera_closer">Move closer to search</string>
+    <string name="prompt_searching">Searching&#8230;</string>
+    <!-- Strings for product search settings. -->
+    <string name="pref_key_enable_auto_search" translatable="false">pkeas</string>
+    <string name="pref_key_confirmation_time_in_manual_search" translatable="false">ctims</string>
+    <string name="pref_key_confirmation_time_in_auto_search" translatable="false">ctias</string>
+    <!-- Strings for camera settings. -->
+    <string name="pref_key_rear_camera_preview_size" translatable="false">rcpvs</string>
+    <string name="pref_key_rear_camera_picture_size" translatable="false">rcpts</string>
+    <!-- Strings for object detection settings. -->
+    <string name="pref_key_object_detector_enable_multiple_objects" translatable="false">odemo</string>
+    <string name="pref_key_object_detector_enable_classification" translatable="false">odec</string>
+    <string name="search">Search...</string>
+    <string name="no_results_found">No Result Found</string>
+    <string name="customers">Customers</string>
+    <string name="new_order">New Order</string>
+    <string name="entry_order_subtitle">Create a new bottle purchase order of the customer</string>
+    <string name="entry_transaction_title">New Transaction</string>
+    <string name="entry_transaction_subtitle">Enter the new transaction of the customer</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="recent">Recents</string>
+    <string name="_91">+91</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="username_shop_name">User Name / Shop Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="user_info">Admin Information</string>
+    <string name="transaction_date">Transaction Date</string>
+    <string name="amount">Amount</string>
+    <string name="change">Change</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="rate">Loading rate</string>
+    <string name="order_date">Order date</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="amount_received">Amount Received</string>
+    <string name="total_pieces">Total Bottle Quantity</string>
+    <string name="login">Login</string>
+    <string name="enter_your_email_id">Enter your email id</string>
+    <string name="email_id">Email ID</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="password">Password</string>
+
+    <!---->
+    <string name="Wallet">Wallet</string>
+    <string name="address">Home / Shop Address</string>
+    <string name="order_number">Order Number</string>
+    <string name="date">Date</string>
+    <string name="quantity">Bottle Quantity</string>
+    <string name="paid_via">Paid via</string>
+    <string name="trans_no">Transaction Number</string>
+    <string name="note">Note</string>
+    <string name="paid_amount">Paid Amount</string>
+    <string name="enter_new_rate">Enter rate</string>
+    <string name="admin_info">Admin Information</string>
+    <string name="public_email">Public Email</string>
+    <string name="enter_your_old_password">Enter your old password</string>
+    <string name="enter_your_new_password">Enter your new password</string>
+    <string name="total_orders">Total Orders</string>
+    <string name="total_transactions">Total Transactions</string>
+    <string name="total_earnings">Total Earnings</string>
+    <string name="qr_name">Enter QR Code Name</string>
+    <string name="loading">Loading...</string>
+    <string name="entry_bottle">Return Bottles</string>
+    <string name="entry_bottle_subtitle">Enter return bottles</string>
+    <string name="bottles_id">Bottles Return ID</string>
+    <string name="rate_extra">Rate</string>
+    <string name="filter_data">Filter data</string>
+    <string name="total_bottles">Total Bottles</string>
+    <string name="user_image">User Image</string>
+    <string name="failed_to_connect">Failed to connect\nto server.</string>
+    <string name="title">Title</string>
+    <string name="show_a_message_when_user_open_the_app">Show a message when user open the app</string>
+    <string name="select_layout">Select Layout</string>
+    <string name="mail_authentication_failed">Mail sending failed. It\'s look like the google have disable the permission. Please contact developer to enable the permission. Thank you</string>
+    <string name="no_layout_found">No layout found</string>
+    <string name="mail_help_message"><b>Send Email </b>\n \nThis allow us to send the mail to any customers right from the app.
+        It gives the options to select the customers email from the list of all customers.
+        \n\n<b>The Email have following components</b>
+        \n\n<b>Title:</b> Title section used to enter the title of the mail.
+        The title is very important as if not entered correctly then the mail might go to the user\'s spam
+        folder or treated as a promotional mail.\nSo for good title please take care of the below points.
+
+        \n<b>-</b> The title should not have unnecessary spacing.\n<b>-</b> The title should not have any misspelled words.
+        \n<b>-</b> Title should not contains grammatical error.\n<b>-</b> The title should be small and precise.
+        \n\n<b>Description:</b> The description of the mail contains the main message of the mail. It might contains additional information and styling formatted using HTML format.
+        \n\n<b>Errors:</b>\n
+        \n<b>- Invalid Username,Password:</b> Google have disable the permission. Please contact developer to enable the permission
+        \n\n<b>- Mail Failed:</b> The internet connection is week this error arise.
+        \n\n<b>- Email not found:</b> When the user does not entered their email address.
+    </string>
+    <string name="popup_help_message"><b>Popup Notification</b>\n\nPopup notification allow us to send the notification direct to the user\'s screen.
+        When the user opens the app a dialog will open automatically and show the message.
+        \n\n<b>The popup have the following components</b>\n
+        \n<b>- Title:</b> The title of the message you want to send to the user. Title should be small and precise.
+        \n\n<b>- Description:</b> The description contains the detailed information or the message of the notification.
+        \n\n<b>- Layout:</b> Before sending the notification you need to select the layout.
+        The layouts are the predefined user interface containing the title and the description.
+        \n\n<b>Note:</b> Only one popup can be generated for a user. When another is created the new one automatically replaced the older one.
+            \n\n<b>Errors:</b>\n\n
+        <b>- Message Failed:</b> The internet connection is week or not working.
+        \n\n<b>- No Layout:</b> Developer have disable this feature. Contact them to enable it.
+    </string>
+    <string name="notification_help_message"><b>Send Notification</b>\n\nNotification is a type of message which is shown on
+        the mobile status bar. This ensures that whether the user is using the app or not the message still get delivered and displayed at the status bar of the mobile.
+        \nThe user will whenever opens their internet they will receives the notification.
+        \n\n<b>The notification have the following components</b>
+        \n\n<b>- Title:</b> The title of the message you want to send to the user. Title should be small and precise.
+        \n\n<b>- Description:</b> The description contains the detailed information or the message of the notification.
+        \n\n<b>Errors:</b>\n\n
+        <b>- User Logged out:</b> We can send the message only to a logged in user.
+        \n\n<b>- Message Failed:</b> The internet connection is week or not working.
+    </string>
+    <string name="info_box_help_message"><b>Create information box</b>
+        \n\nIt will create a box at the bottom of the screen containing the title and the description.
+        The box will be permanently visible to the user until the admin deletes it or it expires
+        \nThe information box is helpful when a certain important message or notification is required to show like payment reminder etc.
+        \n\n<b>The information box have the following components</b>
+        \n\n<b>- Title:</b> The title of the message you want to show to the user. Title should be small and precise.
+        \n\n<b>- Description:</b> The description contains the detailed information or the message of the notification.
+        \n\n<b>- Time:</b> It will help in displaying the message only at a scheduled date.
+
+        \n\n<b>Errors:</b>
+        \n\n<b>- Message Failed:</b> The internet connection is week or not working.
+        \n\n<b>Note:</b> Only one information box can be created for a user. When another is created the new one automatically replaced the older one.
+
+    </string>
+    <string name="default_notification_channel_id">1211211</string>
+    <string name="ok">OK</string>
+    <string name="new_password">New password</string>
+    <string name="app_version">V 2.1.1</string>
+    <string name="email_template">email_template</string>
+    <string name="email_template_initial_s">email_separator_initial_start</string>
+    <string name="email_template_initial_e">email_separator_initial_end</string>
+    <string name="email_template_s">email_separator_start</string>
+    <string name="email_template_e">email_separator_end</string>
+    <string name="fetch_interval">fetch_interval</string>
+    <string name="no_payment">No payment</string>
+    <string name="other">Other</string>
+    <string name="del_user_description">Deleting the user is a sensitive operation which will direct affect the performance of the app. If you are not sure it is advisable to rethink before operating this feature.\n\n
+        <b>There are two options available</b>\n\n<b>1.Block the user - </b>If you block the user all data of the user is still available but not accessible by the user himself. It only includes the personal information like name, mobile, email id, address, rate, pending bottles, and the <b>wallet amount</b>. Blocked user will not be able access it.\nA blocked user can access information like orders, all transactions, and their bottle information, but after 6 hour, this also not be accessible to the user.\n\nIn future an admin can unblock the user.\n\n<b>Note : </b>In some cases a user may not be able to log into their account.
+    \n\n<b>Delete the user - </b>If you delete the user all selected information will be deleted from the storage.When you select the delete option it will ask you to select the records you want to delete.
+        \n\n<b>Have following options</b>\n\n
+        <b>Personal information : </b>It will delete the user name,mobile, address, and the <b>wallet balance</b>.
+        \n\n<b>Orders : </b>It will delete all the bottles purchased.
+        \n\n<b>Transactions : </b>It will delete all the payment record of the user.
+        \n\n<b>Returned bottles : </b>It will delete all the returned bottles records of the user.
+        \n\n<b>Note : </b>In deletion, all record will be permanently deleted from the server which cannot be retrieved back.
+    </string>
+    <string name="delete_user">Edit user</string>
+    <string name="delete_the_user_records_from_the_server">Block the user or delete the user records</string>
+    <string name="blocked_users">Blocked users</string>
+    <string name="custom_admin_info_screen">admin_custom_admin_info_screen</string>
+    <string name="custom_notification_screen">admin_custom_notification_screen</string>
+    <string name="retry">Retry</string>
+    <string name="send_notification_message_to_the_user">Send notification message to the user</string>
+    <string name="send_e_mail_to_the_users">Send e mail to the users</string>
+    <string name="create_a_information_box_for_a_user">Create a information box for a user</string>
+    <string name="alert_info_msg"><b>The alert screen</b>\n\nThe alert screen is used to show the status of the various process execution.\nThe screen includes color theme based on the status of the process execution result</string>
+    <string name="style">STYLE</string>
+    <string name="invalid_color">Invalid color</string>
+    <string name="select_option">Select option</string>
+    <string name="server">From server</string>
+    <string name="storage">From storage</string>
+    <string name="action">ACTION</string>
+
+</resources>

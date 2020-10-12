@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#f6f7f9"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:id="@+id/view">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            app:contentInsetLeft="-10dp"
+            android:layout_weight="1"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:contentInsetStart="-10dp"
+            android:layout_gravity="end"
+            android:gravity="end"
+            app:contentInsetStartWithNavigation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageButton
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:foregroundTint="#fff"
+                    android:background="@drawable/state_imagebutton"
+                    android:tint="#fff"
+                    android:id="@+id/back"
+                    android:onClick="backOnClicked"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:text="Alerts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/back"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                    android:textColor="#fff" />
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/info_icon"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerVertical="true"
+                    android:onClick="showHelpClicked"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/help_outline_white" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/view"
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_height="match_parent">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/recyclerview"
+                    android:paddingTop="10dp"
+                    android:clipToPadding="false"
+                    android:scrollbars="vertical"
+                    tools:itemCount="9"
+                    android:background="#f6f7f9"
+                    tools:listitem="@layout/notification_item"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/progressbar_loader"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    android:layout_marginBottom="20dp"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:layout_width="30dp"
+                        android:layout_gravity="center"
+                        android:layout_height="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:text="Loading more notifications..."
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressbar"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/view"
+        android:padding="16dp"
+        android:visibility="gone"
+        android:id="@+id/info_screen"
+        android:background="#fff"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/alertMsg"
+            android:textSize="16sp"
+            android:text="@string/alert_info_msg"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_below="@id/alertMsg"
+            android:layout_marginTop="16dp"
+            android:id="@+id/view_green"
+            android:background="@color/green_light"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Successful"
+            android:layout_below="@id/alertMsg"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/view_green"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_below="@id/view_green"
+            android:layout_marginTop="16dp"
+            android:id="@+id/view_red"
+            android:background="@color/red"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Failed"
+            android:layout_below="@id/view_green"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/view_red"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_below="@id/view_red"
+            android:layout_marginTop="16dp"
+            android:background="@color/lightgray"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="No status / Information message"
+            android:layout_below="@id/view_red"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/view_green"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

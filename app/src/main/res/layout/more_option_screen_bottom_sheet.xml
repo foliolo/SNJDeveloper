@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:background="?selectableItemBackground"
+            android:drawablePadding="25dp"
+            android:id="@+id/fabnewCustomer"
+            android:textColor="@color/black"
+            android:text="Add customer"
+            android:layout_height="wrap_content"
+            app:drawableStartCompat="@drawable/add_user" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:drawablePadding="25dp"
+            android:id="@+id/fabSendAlert"
+            android:background="?selectableItemBackground"
+            android:textColor="@color/black"
+            android:text="Send bill"
+            android:layout_height="wrap_content"
+            app:drawableStartCompat="@drawable/ic_paper_plane" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@color/view_color"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="25dp"
+            android:textColor="@color/black"
+            android:text="Bill Notification Settings"
+            android:layout_height="wrap_content"
+            app:drawableStartCompat="@drawable/ic_settings_black_24dp"
+            app:drawableTint="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="match_parent"
+            android:id="@+id/sendNotification"
+            android:background="#F5F5F5"
+            android:layoutDirection="rtl"
+            android:paddingStart="16dp"
+            android:layout_marginStart="20dp"
+            android:paddingEnd="16dp"
+            android:text="Send bill notification"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="20dp"
+            android:text="A notification will be send to the user about their bill report"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="match_parent"
+            android:id="@+id/sendEmail"
+            android:layoutDirection="rtl"
+            android:padding="16dp"
+            android:background="#F5F5F5"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Send bill in email"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="20dp"
+            android:text="An email will be send to the user containing their bill report"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="match_parent"
+            android:id="@+id/sendBillInApp"
+            android:layoutDirection="rtl"
+            android:padding="16dp"
+            android:background="#F5F5F5"
+            android:layout_marginStart="20dp"
+            android:text="Show bill in app"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="20dp"
+            android:text="An information box will be visible to the home screen of the user showing their bill report. It is recommended that not disable this feature as it is the easiest way for the user to see their monthly bill"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

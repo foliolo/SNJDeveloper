@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/mainLinear"
+    android:layout_marginTop="5dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/qr_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="60dp"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="1dp"
+        android:autoLink="web"
+        android:textColor="@color/product_description"
+        android:textSize="14sp" />
+    <RelativeLayout
+        android:layout_marginStart="-50dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/copy"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/seekbar_shape"
+        android:clickable="false"
+        android:padding="10dp"
+        android:src="@drawable/ic_delete_black_24dp"
+        android:tint="#3A3A3A"
+        android:visibility="invisible" />
+
+    <ProgressBar
+        android:layout_width="30dp"
+        android:id="@+id/progressbar_qr"
+        android:elevation="20dp"
+        android:indeterminateTint="#fff"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/seekbar_shape"
+        android:layout_height="30dp"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginBottom="12dp"
+    android:layout_height="wrap_content"
+    >
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/adapter_progressbar"
+        android:layout_height="30dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/edit_data"
+        app:hintEnabled="true"
+        app:boxBackgroundColor="@color/white"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:endIconMode="dropdown_menu"
+        app:endIconTint="@color/colorAccent"
+        android:hint="@string/style"
+        app:helperTextEnabled="false"
+        android:layout_height="wrap_content">
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:paddingStart="11dp"
+        android:paddingEnd="10dp"
+        android:longClickable="false"
+        android:textColorHint="@color/black"
+        android:editable="false"
+        android:id="@+id/edit_data_value"
+        android:layout_height="wrap_content">
+
+    </AutoCompleteTextView>
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
