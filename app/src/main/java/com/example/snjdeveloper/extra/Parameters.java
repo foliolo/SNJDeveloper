@@ -243,12 +243,14 @@ public class Parameters extends NotificationAction {
         HashMap<String, Object> map = new HashMap<>();
         map.put("intent", "ACTION_OPEN_TRANSACTIONS");
         map.put("ACTION", "ACTION_OPEN_TRANSACTIONS");
+        map.put("CLASS_NAME", "Transactions");
         return map;
     }
     public HashMap<String,Object> getOrderActivityParameters() {
         HashMap<String, Object> map = new HashMap<>();
         map.put("intent", "ACTION_OPEN_ORDERS");
         map.put("ACTION", "ACTION_OPEN_ORDERS");
+        map.put("CLASS_NAME", "Orders");
         return map;
     }
     public HashMap<String,Object> getBottlesActivityParameters() {

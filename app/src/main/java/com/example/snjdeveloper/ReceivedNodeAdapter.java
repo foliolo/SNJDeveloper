@@ -43,7 +43,7 @@ public class ReceivedNodeAdapter extends RecyclerView.Adapter<ReceivedNodeViewHo
             return color_adapter_layout;
         }else if (key.equals("style2")||key.equals("type")) {
             return multi_option_adapter_layout;
-        }else if (key.equals("style")||key.equals("action")||key.equals("intent")|| key.equals("1")) {
+        }else if (key.equals("style")||key.equals("action")||key.equals("intent")|| key.equals("1")||key.equals("class_name")) {
             return hidden_text_input_layout;
         }
         return input_text_layout;

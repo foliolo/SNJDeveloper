@@ -143,7 +143,7 @@ public class SendNotificationActivity extends AppCompatActivity {
             {
                 list .addAll(parameters.getActionParametersList(position+1));
             }
-            parameters.removeFields(list,new String[]{"intent"});
+            parameters.removeFields(list,new String[]{"ACTION"});
             adapter.notifyDataSetChanged();
 //            ArrayList<HashMap<String, Object>> list = parameters.getActionParametersList(position);
 //            parameters.removeFields (list,new String[]{"ACTION"});
