@@ -18,14 +18,17 @@
 
         <View
             android:layout_width="match_parent"
-            android:background="#213E39"
+            android:elevation="2dp"
+            android:background="@color/colorPrimary"
             android:layout_height="30dp" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="230dp"
             android:layout_marginTop="-30dp"
-            app:cardBackgroundColor="@color/homecolor"
+
+            android:background="@color/colorPrimary"
+            app:cardBackgroundColor="@color/colorPrimary"
             app:cardCornerRadius="35dp">
 
             <RelativeLayout
@@ -43,16 +46,16 @@
                     android:layout_marginEnd="15dp"
                     app:fabSize="mini"
                     android:layout_marginBottom="15dp"
-                    app:tint="@null"
+                    app:tint="@color/black"
                     android:id="@+id/user"
-                    android:backgroundTint="@color/colorAccent"
+                    android:backgroundTint="@color/white"
                     android:src="@drawable/user_24dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:text="Admin"
+                    android:text="Developer"
                     android:layout_marginTop="22dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:layout_toEndOf="@id/user"
                     android:textSize="25sp"
                     android:layout_height="wrap_content" />
@@ -67,34 +70,38 @@
                     app:fabSize="mini"
                     app:maxImageSize="18dp"
                     android:id="@+id/scan_qr"
-                    app:tint="@null"
+                    app:tint="@color/black"
                     android:layout_marginEnd="15dp"
                     android:layout_marginBottom="15dp"
-                    android:backgroundTint="@color/colorAccent"
+                    android:backgroundTint="@color/white"
                     android:src="@drawable/ic_qr_code"
                     android:onClick="scanQROnClicked"
 
                     />
-
-                <TextView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
                     android:layout_below="@id/scan_qr"
                     android:layout_marginStart="25dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginEnd="20dp"
                     android:background="@drawable/search_bar"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="45dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
                     android:drawableStart="@drawable/ic_search_black_24dp"
                     android:drawablePadding="10dp"
+                    android:background="?selectableItemBackgroundBorderless"
                     android:drawableTint="#546F6A"
                     android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
                     android:hint="@string/search"
                     android:onClick="searchOnClick"
                     android:paddingStart="15dp"
                     android:paddingEnd="5dp"
                     android:textColorHint="#546F6A"
                     android:textSize="16sp" />
-
+                </RelativeLayout>
                 <TextView
                     android:id="@+id/name"
                     android:layout_width="match_parent"
@@ -131,6 +138,11 @@
             app:iconGravity="textStart"
             android:paddingStart="5dp"
             android:textSize="19sp"
+            android:textColor="@color/black"
+            app:rippleColor="#1D000000"
+            app:tint="@color/black"
+            app:iconTint="@color/black"
+            android:backgroundTint="@color/white"
             app:icon="@drawable/ic_add_while"
             android:layout_height="60dp" />
 
@@ -644,7 +656,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        app:cardBackgroundColor="#CDCD05"
+                        app:cardBackgroundColor="#EA03B7"
                         app:cardCornerRadius="32dp"
                         app:cardElevation="10dp">
 

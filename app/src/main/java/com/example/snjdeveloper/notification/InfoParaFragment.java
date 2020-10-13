@@ -84,7 +84,11 @@ public class InfoParaFragment extends Fragment {
         ArrayList<HashMap<String,Object>>ordersData=new ArrayList<>();
         List<String> allList=new ArrayList<>();
         if (type.contains("Bottle")){
-            FirebaseFirestore.getInstance().collection("Bottles").orderBy("UID").startAt(uid).get().addOnSuccessListener(queryDocumentSnapshots -> {
+            FirebaseFirestore.getInstance().collection("Bottles")
+                    .whereEqualTo("UID",uid)
+                    //.orderBy("UID").
+                    //startAt(uid)
+                    .get().addOnSuccessListener(queryDocumentSnapshots -> {
                 if (progressBar!=null)
                     progressBar.setVisibility(View.GONE);
                 Log.e("InfoScreen",type+" received from db");
@@ -94,15 +98,15 @@ public class InfoParaFragment extends Fragment {
                         HashMap<String, Object> temp = (HashMap<String, Object>) document.getData();
                         setDBData(temp, ordersData,document.getId());
                     }
-                    loadInfoScreen(allList,ordersData,type,completeTextView);
                 }else Log.e("InfoScreen",type+" received from db is empty");
+                loadInfoScreen(allList,ordersData,type,completeTextView);
             });
         }else {
             DatabaseReference databaseReference;
             if (type.contains("Orders")) {
-                databaseReference = FirebaseDatabase.getInstance().getReference(type);
+                databaseReference = FirebaseDatabase.getInstance().getReference("Orders");
             } else databaseReference = new TransactionDb().getReference(getContext());
-            databaseReference.orderByChild("UID").addListenerForSingleValueEvent(new ValueEventListener() {
+            databaseReference.orderByChild("UID").equalTo(uid).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     Log.e("InfoScreen",type+" received from db");
@@ -115,8 +119,10 @@ public class InfoParaFragment extends Fragment {
                             allList.add(dataSnapshot.getKey());
                         }
                         Log.e("InfoScreen",type+" received from db is loaded "+allList+"\n"+ordersData);
-                        loadInfoScreen(allList,ordersData,type,completeTextView);
-                    }else Log.e("InfoScreen",type+" received from db is empty");
+                    }else{
+                        Log.e("InfoScreen",type+" received from db is empty");
+                    }
+                    loadInfoScreen(allList,ordersData,type,completeTextView);
                 }
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {

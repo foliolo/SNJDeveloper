@@ -31,27 +31,29 @@ public class Recent {
     }
 
     public void addNewRecent(String uid, String name, Activity activity) {
-        SharedPreferences sh = activity.getSharedPreferences("RECENT_SEARCH", Context.MODE_PRIVATE);
-        int pointer = sh.getInt("POINTER", 1);
-        //check if exist in shared pref
-        int initial = 0;//if data exist in pref it will not be zero
+       try {
+           SharedPreferences sh = activity.getSharedPreferences("RECENT_SEARCH", Context.MODE_PRIVATE);
+           int pointer = sh.getInt("POINTER", 1);
+           //check if exist in shared pref
+           int initial = 0;//if data exist in pref it will not be zero
 
-        if (sh.getString("1", null) == null) {
-            replaceWithNew(pointer, sh, name, uid);
-        } else {
-            for (int i = 1; i <= maxRecentLimit; i++) {
-                String data = sh.getString(String.valueOf(i), null);
-                if (data == null)
-                    break;
-                if (data.contains(uid))
-                    initial = i;
-            }
-            if (initial != 0 && initial != pointer - 1)
-                changePosition(initial, pointer, sh, name, uid);
-            else if (initial == 0)
-                replaceWithNew(pointer, sh, name, uid);
+           if (sh.getString("1", null) == null) {
+               replaceWithNew(pointer, sh, name, uid);
+           } else {
+               for (int i = 1; i <= maxRecentLimit; i++) {
+                   String data = sh.getString(String.valueOf(i), null);
+                   if (data == null)
+                       break;
+                   if (data.contains(uid))
+                       initial = i;
+               }
+               if (initial != 0 && initial != pointer - 1)
+                   changePosition(initial, pointer, sh, name, uid);
+               else if (initial == 0)
+                   replaceWithNew(pointer, sh, name, uid);
 
-        }
+           }
+       }catch (Exception ignored){}
     }
 
     /*Add new recent contact into shared pref*/
