@@ -74,11 +74,11 @@ public class MoreOptionFragment extends BottomSheetDialogFragment {
         billInApp = getView().findViewById(R.id.sendBillInApp);
         if (adminNotificationCred != null) {
             if (adminNotificationCred.containsKey("SEND_BILL_EMAIL"))
-                billEmail.setChecked(adminNotificationCred.containsKey("SEND_BILL_EMAIL"));
+                billEmail.setChecked(adminNotificationCred.get("SEND_BILL_EMAIL"));
             if (adminNotificationCred.containsKey("SEND_BILL_NOTIFICATION"))
-                billNotify.setChecked(adminNotificationCred.containsKey("SEND_BILL_NOTIFICATION"));
+                billNotify.setChecked(adminNotificationCred.get("SEND_BILL_NOTIFICATION"));
             if (adminNotificationCred.containsKey("SEND_BILL_IN_APP"))
-                billInApp.setChecked(adminNotificationCred.containsKey("SEND_BILL_IN_APP"));
+                billInApp.setChecked((boolean)adminNotificationCred.get("SEND_BILL_IN_APP"));
             else billInApp.setChecked(true);
         }
     }
